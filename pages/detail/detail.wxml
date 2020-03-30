@@ -1,0 +1,68 @@
+<view>
+	<!-- 头部搜索 -->
+	<MyTitle></MyTitle>
+
+	<!-- 视频详情 -->
+	<view class="video_info">
+		<!-- 视频 -->
+		<video src="{{videoInfo.videoSrc}}"></video>
+		<!-- 视频标题 -->
+		<view class="video_title">
+			<text>{{videoInfo.videoTitle}}</text>
+			<view class="arrow"></view>
+		</view>
+		<!-- 视频播放量等 -->
+		<view class="video_status">
+			<!-- 作者 -->
+			<view>{{videoInfo.author}}</view>
+			<!-- 播放量 -->
+			<view class="font_color">{{videoInfo.playCount}}</view>
+			<!-- 评论量 -->
+			<view class="font_color">{{videoInfo.commentCount}}弹幕</view>
+			<!-- 时间 -->
+			<view class="font_color">{{videoInfo.date}}</view>
+		</view>
+	</view>
+
+	<!-- 推荐视频 -->
+	<view class="recommend_video">
+		<navigator class="recommend_item" wx:for="{{recommendList}}" wx:key="index">
+			<!-- 左边图片 -->
+			<view>
+				<image src="{{item.imgSrc}}" mode="widthFix"></image>
+			</view>
+			<!-- 右边信息 -->
+			<view class="recommend_right_info">
+				<text class="title">{{item.title}}</text>
+				<view>
+					<text class="color">{{item.playMsg}}万次观看</text>
+					<text class="color">{{item.commentCount}}弹幕</text>
+				</view>
+			</view>
+		</navigator>
+	</view>
+
+	<!-- 评论列表 -->
+	<view class="comment">
+		<!-- 评论title -->
+		<view>评论({{commentData.commentTotalCount}})</view>
+		<!-- 评论项 -->
+		<!-- 每一项 -->
+		<view class="comment_item" wx:for="{{commentData.commentList}}" wx:key="index">
+			<!-- 左边图片 -->
+			<view class="comment_image">
+				<image mode="widthFix" src="{{item.userIconSrc}}"></image>
+			</view>
+			<!-- 右边内容 -->
+			<view class="comment_right">
+				<!-- 上 -->
+				<view class="comment_name">
+					<text>{{item.username}}</text>
+					<text>{{item.commentDate}}</text>
+				</view>
+				<!-- 下 -->
+				<text>{{item.commentInfo}}</text>
+			</view>
+		</view>
+	</view>
+</view>

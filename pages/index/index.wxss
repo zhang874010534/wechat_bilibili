@@ -1,0 +1,58 @@
+page {
+  color: #666;
+  padding: 10rpx;
+  box-sizing: border-box;
+}
+
+.nav_scroll {
+  white-space: nowrap;
+  padding-top: 15rpx;
+}
+
+.nav_scroll view {
+  display: inline-block;
+  padding: 20rpx 30rpx;
+}
+
+.nav_view_active {
+  border-bottom: 5rpx solid #de688b;
+}
+
+/* 轮播图 */
+.home_swiper {
+  padding-top: 20rpx;
+}
+
+.home_swiper navigator {
+  width: 100%;
+  height: 100%;
+}
+
+.home_swiper image {
+  width: 100%;
+  height: 100%;
+}
+
+/* 视频列表 */
+.video_list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding-top: 15rpx;
+}
+
+.video_list navigator {
+  width: 45%;
+}
+
+.video_image image {
+  width: 100%;
+  border-radius: 15rpx;
+}
+.video_title{
+  font-size: 28rpx;
+  /* 这东西有bug 外面设置padding和margin都改变不了整体高度 */
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}

@@ -1,0 +1,36 @@
+<view>
+	<!-- 公用的导航组件 -->
+	<MyTitle></MyTitle>
+	<!-- 首页导航 -->
+	<view class="nav_view">
+		<scroll-view class="nav_scroll" scroll-x>
+			<view class="{{index===navIndex?'nav_view_active':''}}" bindtap="activeNav" data-index="{{index}}" wx:for="{{navList}}" wx:key="index">{{item.text}}</view>
+		</scroll-view>
+	</view>
+	<!-- 轮播图 -->
+	<view>
+		<swiper class="home_swiper" autoplay circular indicator-dots>
+			<swiper-item wx:for="{{swiperList}}" wx:key="index">
+				<navigator>
+					<image src="{{item.imgSrc}}"></image>
+				</navigator>
+			</swiper-item>
+		</swiper>
+	</view>
+	<!-- 视频列表 -->
+	<view class="video_list">
+		<navigator url="../detail/detail?id={{item.id}}" wx:for="{{videoList}}" wx:key="index">
+			<view class="video_image">
+				<!-- 图片 -->
+				<image mode="widthFix" src="{{item.imgSrc}}"></image>
+				<!-- 图片上的字 -->
+				<view>
+					<!-- 播放量 -->
+					<!-- 评论量 -->
+				</view>
+			</view>
+			<!-- 标题 -->
+			<view class="video_title">{{item.desc}}</view>
+		</navigator>
+	</view>
+</view>

@@ -1,0 +1,18 @@
+<view class="my_title">
+	<!-- 头部搜索 -->
+	<navigator class="logo">
+		<image class="logo_image" style="width:140rpx;height:60rpx" src="../../static/logo.png"></image>
+	</navigator>
+	<!-- 搜索 -->
+	<view class="search_icon">
+		<image style="width:50rpx;height:50rpx" src="../../static/search.png"></image>
+	</view>
+	<!-- 头像 -->
+	<view class="avatar">
+		<image style="width:54rpx;height:50rpx" src="../../static/avatar.png"></image>
+	</view>
+	<!-- 下载按钮 -->
+	<view class="download">
+  下载App
+	</view>
+</view>
