@@ -1,11 +1,11 @@
 #### 首页
 
-![首页](static\首页.png)
+![首页](static/首页.png)
 
 #### 详情页
 
-![详情页](static\详情页.png)
+![详情页](static/详情页.png)
 
 #### 详情页评论
 
-![详情页评论](static\详情页评论.png)
+![详情页评论](static/详情页评论.png)
